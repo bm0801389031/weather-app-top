@@ -9,7 +9,7 @@ const weather = (() => {
     }
 
     async function getData(city) {
-        const endpoint = `https://api.openweathermap.org/data/2.5/weather?q=${city},us&APPID=148eac97502214d5edbe5a9cdec65ecc`;
+        const endpoint = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&APPID=148eac97502214d5edbe5a9cdec65ecc`;
         try {
             const response = await fetch(endpoint, { mode: "cors" });
             if (!response.ok) throw new Error(`City ${city} not found`);
